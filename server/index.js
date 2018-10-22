@@ -12,9 +12,9 @@ app.use(json());
 routes(app);
 
 massive(process.env.CONNECTION_STRING).then(dbinstance => {
-	app.set("db", dbinstance);
+  app.set("db", dbinstance);
 });
 
 app.listen(port, () => {
-	console.log(`app is listening on port ${port}`);
+  console.log(`app is listening on port ${port}`);
 });
