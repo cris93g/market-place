@@ -38,5 +38,53 @@ module.exports = {
 		db.getTotes()
 			.then(response => res.status(200).json(response))
 			.catch(err => res.status(500).send(err));
+	},
+	getMessenger(req, res, next) {
+		const db = req.app.get("db");
+		db.getMessenger()
+			.then(response => res.status(200).json(response))
+			.catch(err => res.status(500).send(err));
+	},
+	getDuffle(req, res, next) {
+		const db = req.app.get("db");
+		db.getDuffle()
+			.then(response => res.status(200).json(response))
+			.catch(err => res.status(500).send(err));
+	},
+	getBackpack(req, res, next) {
+		const db = req.app.get("db");
+		db.getBackpack()
+			.then(response => res.status(200).json(response))
+			.catch(err => res.status(500).send(err));
+	},
+	getWallet(req, res, next) {
+		const db = req.app.get("db");
+		db.getWallet()
+			.then(response => res.status(200).json(response))
+			.catch(err => res.status(500).send(err));
+	},
+	getBelt(req, res, next) {
+		const db = req.app.get("db");
+		db.getBelt()
+			.then(response => res.status(200).json(response))
+			.catch(err => res.status(500).send(err));
+	},
+	getShirt(req, res, next) {
+		const db = req.app.get("db");
+		db.getShirt()
+			.then(response => res.status(200).json(response))
+			.catch(err => res.status(500).send(err));
+	},
+	getJacket(req, res, next) {
+		const db = req.app.get("db");
+		db.getJacket()
+			.then(response => res.status(200).json(response))
+			.catch(err => res.status(500).send(err));
+	},
+	getCert(req, res, next) {
+		const db = req.app.get("db");
+		db.getCert()
+			.then(response => res.status(200).json(response))
+			.catch(err => res.status(500).send(err));
 	}
 };
