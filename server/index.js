@@ -47,6 +47,7 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((user, done) => done(null, user));
 
 app.get("/me", getUser);
+app.get("/logout", logout);
 
 app.get(
 	"/login",
