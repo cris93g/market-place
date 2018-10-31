@@ -18,7 +18,11 @@ export default class NavBar extends Component {
     return (
       <div>
         <Nav>
-          <img class="logo" src={require("../../Pictures/logo_home.png")} />
+          <img
+            class="logo"
+            src={require("../../Pictures/logo_home.png")}
+            alt=" logo"
+          />
           <div>
             <RightSide>
               <Link to="Leather">

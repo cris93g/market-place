@@ -3,35 +3,41 @@ import { getLeather } from "../../redux/ducks/itemReducer";
 import { connect } from "react-redux";
 
 class Leather extends Component {
-	componentDidMount() {
-		this.props.getLeather();
-	}
+  //pulls data from redux
+  componentDidMount() {
+    this.props.getLeather();
+  }
 
-	render() {
-		const { isLoading, items } = this.props;
-		console.log(this.props);
-		const itemsDisplay = isLoading ? (
-			<p>Loading...</p>
-		) : (
-			items.map(item => {
-				return (
-					<div>
-						<img src={item.img_url} />
-						<h3>{item.name}</h3>
-					</div>
-				);
-			})
-		);
-		return <div>{itemsDisplay}</div>;
-	}
+  render() {
+    //puts data we got from redux into this.props
+    const { isLoading, items } = this.props;
+    console.log(this.props);
+    const itemsDisplay = isLoading ? (
+      <p>Loading...</p>
+    ) : (
+      //goes through data one by one
+      items.map(item => {
+        return (
+          <div>
+            <img
+              src={item.img_url}
+              alt="images of different leather type items"
+            />
+            <h3>{item.name}</h3>
+          </div>
+        );
+      })
+    );
+    return <div>{itemsDisplay}</div>;
+  }
 }
 const mapStateToProps = state => {
-	return {
-		items: state.items
-	};
+  return {
+    items: state.items
+  };
 };
 
 export default connect(
-	mapStateToProps,
-	{ getLeather }
+  mapStateToProps,
+  { getLeather }
 )(Leather);
