@@ -8,9 +8,9 @@ import Accessories from "./components/Accessories/Accessories";
 export default (
   <Switch>
     <Route component={Home} exact path="/" />
-    <Route component={Leather} exact path="/collections/leather" />
-    <Route component={Apparel} exact path="/collections/apparel" />
-    <Route component={Accessories} exact path="/collections/accessories" />
-    <Route component={Cart} exact path="/collections/cart" />
+    <Route component={Leather} exact path="/leather" />
+    <Route component={Apparel} exact path="/apparel" />
+    <Route component={Accessories} exact path="/accessories" />
+    <Route component={Cart} exact path="/cart" />
   </Switch>
 );
