@@ -4,7 +4,7 @@ import styled from "styled-components";
 const FooterWrapper = styled.section`
   width: 100%;
   height: 50vh;
-  background-color: maroon;
+  background-color: #8c1727;
   display: flex;
   justify-content: space-around;
   margin-top: 2%;
